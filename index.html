@@ -1,0 +1,147 @@
+<!-- https://www.biblia.info.pl/api/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bible app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://www.biblia.info.pl/api/displayVerse.js"
+    ></script>
+    <script defer src="script.js"></script>
+
+  </head>
+  <body class="day">
+    <div class="themeContainer">
+      <div class="colorTheme">☀</div>
+      <div class="message_btn">
+        <button class="btn">Generuj cytat</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="formAndTable">
+        <form>
+          <table>
+            <tr>
+              <th>Tłumaczenie</th>
+              <tr>
+                <td>
+                <select name="translation" id="translation">
+                  <option value="ug">Uwspółcześniona Biblia Gdańska</option>
+                </select>
+              </td>
+              </tr>
+              <th>Księga</th>
+            </tr>
+
+            <tr>
+              
+              <td>
+                <select name="book" id="book_id">
+                  <option disabled>---Stary Testament---</option>
+                  <option value="Rdz">Księga Rodzaju</option>
+                  <option value="Wj">Księga Wyjścia</option>
+                  <option value="Kpł">Księga Kapłańska</option>
+                  <option value="Lb">Księga Liczb</option>
+                  <option value="Pwt">Księga Powtórzonego Prawa</option>
+                  <option value="Joz">Księga Jozuego</option>
+                  <option value="Sdz">Księga Sędziów</option>
+                  <option value="Rt">Księga Rut</option>
+                  <option value="1Sm">1 Księga Samuela</option>
+                  <option value="2Sm">2 Księga Samuela</option>
+                  <option value="1Krl">1 Księga Królewska</option>
+                  <option value="2Krl">2 Księga Królewska</option>
+                  <option value="1Krn">1 Księga Kronik</option>
+                  <option value="2Krn">2 Księga Kronik</option>
+                  <option value="Ezd">Księga Ezdrasza</option>
+                  <option value="Neh">Księga Nehemiasza</option>
+                  <option value="Est">Księga Estery</option>
+                  <option value="Job">Księga Hioba</option>
+                  <option value="Ps">Księga Psalmów</option>
+                  <option value="Prz">Księga Przysłów</option>
+                  <option value="Koh">Księga Koheleta</option>
+                  <option value="PNP">Pieśń nad pieśniami</option>
+                  <option value="Iz">Księga Izajasza</option>
+                  <option value="Jr">Księga Jeremiasza</option>
+                  <option value="Lm">Lamentacje Jeremiasza</option>
+                  <option value="Ez">Księga Ezechiela</option>
+                  <option value="Dn">Księga Daniela</option>
+                  <option value="Oz">Księga Ozeasza</option>
+                  <option value="Jl">Księga Joela</option>
+                  <option value="Am">Księga Amosa</option>
+                  <option value="Ab">Księga Abdiasza</option>
+                  <option value="Jon">Księga Jonasza</option>
+                  <option value="Mi">Księga Micheasza</option>
+                  <option value="Na">Księga Nahuma</option>
+                  <option value="Ha">Księga Habakuka</option>
+                  <option value="So">Księga Sofoniasza</option>
+                  <option value="Ag">Księga Aggeusza</option>
+                  <option value="Za">Księga Zachariasza</option>
+                  <option value="Ml">Księga Malachiasza</option>
+                  <option disabled>---Nowy Testament---</option>
+                  <option value="Mt">Ewangelia Mateusza</option>
+                  <option value="Mk">Ewangelia Marka</option>
+                  <option value="Łk">Ewangelia Łukasza</option>
+                  <option value="Jn">Ewangelia Jana</option>
+                  <option value="Dz">Dzieje Apostolskie</option>
+                  <option value="Rz">List do Rzymian</option>
+                  <option value="1Kor">1 list do Koryntian</option>
+                  <option value="2Kor">2 list do Koryntian</option>
+                  <option value="Ga">List do Galatów</option>
+                  <option value="Ef">List do Efezjan</option>
+                  <option value="Flp">List do Filipian</option>
+                  <option value="Kol">List do Kolosan</option>
+                  <option value="1Tes">1 List do Tesaloniczan</option>
+                  <option value="2Tes">2 List do Tesaloniczan</option>
+                  <option value="1Tm">1 List do Tymoteusza</option>
+                  <option value="2Tm">2 List do Tymoteusza</option>
+                  <option value="Ty">List do Tytusa</option>
+                  <option value="Flm">List do Filemona</option>
+                  <option value="Hbr">List do Hebrajczyków</option>
+                  <option value="Jk">List Jakuba</option>
+                  <option value="1P">1 List Piotra</option>
+                  <option value="2P">2 List Piotra</option>
+                  <option value="1J">1 List Jana</option>
+                  <option value="2J">2 List Jana</option>
+                  <option value="3J">3 List Jana</option>
+                  <option value="Jud">List Judy</option>
+                  <option value="Ap">Apokalipsa (Objawienie)</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Rozdział</th>
+              <tr>
+                <td>
+                <input type="number" min="1" name="chapter" id="chapter_id" />
+              </td>
+              </tr>
+              <th>Wersety</th>
+            </tr>
+            <tr>
+              
+              <td>
+                <input
+                  type="text"
+                  name="verses"
+                  id="verses_id"
+                  placeholder="Format: x-y"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <!-- <div class="message_box pop_up">Message</div> -->
+      <div id="werset_nr1"></div>
+      <div id="przyciski"></div>
+      
+    </div>
+    <script defer>
+      
+      
+    </script>
+  </body>
+</html>
