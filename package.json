@@ -4,7 +4,8 @@
   "description": "Finds bible quotes based on:",
   "deafult": "index.html",
   "scripts": {
-    "start": "npx parcel index.html"
+    "start": "npx parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Piotr Poletyło",
   "license": "ISC",
