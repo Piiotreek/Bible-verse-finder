@@ -26,4 +26,6 @@ Translation, Book, Chapter and Verses
 
 - Light/dark mode toggle
 
+LINK: https://bible-verse-finder.netlify.app/
+
 
