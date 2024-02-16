@@ -10,6 +10,7 @@ const btn_Generate = document.querySelector(".btn");
 btn_Generate.addEventListener("click", active);
 
 async function active() {
+  buttonBox.innerHTML = "";
   box.innerHTML = "";
   const option_translation = document.getElementById("translation").value;
 
@@ -82,7 +83,7 @@ async function active() {
               chapter,
               `${verseX}-${lastIndex}`
             );
-            document.getElementById("przyciski").innerHTML = "";
+            buttonBox.innerHTML = "";
           } else verseY = verseY + versesPerPage;
 
           //Gdy zajdzie cos takiego że ostatni zakres tablicy zwiekszy sie do tego stopnia że bedzie wiekszy niz zakres podany przez użytkownika

@@ -75,7 +75,7 @@ select {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   background: url("bible.png");
-
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
@@ -83,7 +83,9 @@ select {
   overflow: hidden;
   word-wrap: break-word;
 }
-.formAndTable {
+.formAndTable,
+form,
+table {
   height: 100%;
   width: 100%;
   grid-column: 2/6;
@@ -91,6 +93,7 @@ select {
 }
 #werset_nr1 {
   width: 100%;
+  min-width: 310px;
   height: 100%;
   padding: 5px;
   font-size: 25px;
@@ -99,7 +102,7 @@ select {
   grid-row: 2/10;
 }
 .verse-text {
-  font-size: 20px;
+  font-size: 1vw;
 }
 #przyciski {
   margin: 0;
@@ -138,4 +141,68 @@ select {
   font-size: 50px;
   color: white;
   cursor: pointer;
+}
+
+/*  Media Queris*/
+@media screen and (max-width: 3840px) {
+  .verse-text {
+    font-size: 1.5vw;
+  }
+  th,
+  td,
+  input,
+  select {
+    font-size: 1.5vw;
+  }
+  .btn {
+    padding: 40px;
+    font-size: 40px;
+    height: auto;
+  }
+  .colorTheme {
+    padding: 40px;
+    font-size: 120px;
+    height: auto;
+  }
+  .next {
+    font-size: 1vw;
+    width: 50%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .colorTheme,
+  .btn {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .colorTheme {
+    padding: 0px;
+    font-size: 64px;
+  }
+  .btn {
+    padding: 2px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .verse-text {
+    font-size: 1.2vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  th,
+  td,
+  input,
+  select {
+    font-size: 1.3vw;
+  }
+  input,
+  select,
+  tr {
+    height: 30px;
+  }
 }
